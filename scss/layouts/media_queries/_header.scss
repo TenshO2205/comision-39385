@@ -1,0 +1,150 @@
+@import "../utilities/variables";
+
+@media (max-width:1250px) {
+	.container {
+		nav {
+			max-width: 100%;
+			padding: 0 20px;
+		}
+		.search-box {
+			max-width: calc(100% - 100px);
+			input {
+				padding: 0 100px 0 15px;
+			}
+		}
+	}
+	nav {
+		.contenido {
+			.links {
+				margin-left: 30px;
+			}
+		}
+	}
+	.contenido {
+		.links {
+			li {
+				a {
+					padding: 8px 13px;
+				}
+			}
+		}
+	}
+}
+@media (max-width:900px) {
+	.container {
+		.menu-icon {
+			display: block;
+		}
+		#show-menu {
+			&:checked {
+				~ {
+					.menu-icon {
+						i {
+							&::before {
+								content: "\f00d";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	nav {
+		.contenido {
+			.links {
+				display: block;
+				position: fixed;
+				background-color: $color-gris;
+				height: 100%;
+				width: 100%;
+				top: 70px;
+				left: -100%;
+				margin-left: 0;
+				max-width: 350px;
+				overflow-y: auto;
+				transition: all 0.3s ease;
+			}
+		}
+		#show-menu {
+			&:checked {
+				~ {
+					.contenido {
+						.links {
+							.li-modify{
+								display: block;
+							}
+							left: 0%;
+						}
+					}
+				}
+			}
+		}
+	}
+	.contenido {
+		.links {
+			li {
+				a{
+					&:hover {
+						background-color: $color-gris2;
+					}
+				}
+				label {
+					&:hover {
+						background-color: $color-gris2;
+					}
+					line-height: 40px;
+					font-size: 20px;
+					display: block;
+					padding: 8px 18px;
+					color: $color-negro;
+					cursor: pointer;
+				}
+				margin: 15px 20px;
+				a {
+					line-height: 40px;
+					font-size: 20px;
+					display: block;
+					padding: 8px 18px;
+					color: $color-negro;
+					cursor: pointer;
+				}
+				a.desktop-link {
+					display: none;
+				}
+			}
+			ul {
+				position: static;
+				opacity: 1;
+				visibility: visible;
+				background: none;
+				max-height: 0px;
+				overflow: hidden;
+				li {
+					margin: 7px 20px;
+					a {
+						font-size: 18px;
+						line-height: 30px;
+						border-radius: 5px !important;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width:400px) {
+	.container {
+		nav {
+			padding: 0 10px;
+		}
+		.search-box {
+			max-width: calc(100% - 70px);
+			.btn-icon {
+				width: 30px;
+				right: 0;
+			}
+			input {
+				padding-right: 30px;
+			}
+		}
+	}
+}
