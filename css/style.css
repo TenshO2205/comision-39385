@@ -82,6 +82,12 @@ nav .contenido {
   height: 70px;
   border-radius: 50%; }
 
+.contenido .links .li-modify {
+  display: none;
+  opacity: 0; }
+  .contenido .links .li-modify span {
+    font-weight: bold; }
+
 .contenido .links li {
   list-style: none;
   line-height: 70px;
@@ -122,10 +128,6 @@ nav .contenido {
     top: 55px;
     opacity: 1;
     visibility: visible; }
-    .contenido .links li:hover ul .li-modify {
-      display: none; }
-      .contenido .links li:hover ul .li-modify span {
-        font-weight: bold; }
 
 .contenido .links ul {
   position: absolute;
@@ -588,7 +590,8 @@ footer {
   nav #show-menu:checked ~ .contenido .links {
     left: 0%; }
     nav #show-menu:checked ~ .contenido .links .li-modify {
-      display: block; }
+      display: block;
+      opacity: 1; }
   .contenido .links li {
     margin: 15px 20px; }
     .contenido .links li a:hover {
