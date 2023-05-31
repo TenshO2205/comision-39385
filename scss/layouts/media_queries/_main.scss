@@ -94,6 +94,20 @@
                 }
             }
         }
+        .box-cards{
+            .card{
+                border-color: $color-lila;
+                box-shadow: 5px 15px 25px $color-lila;
+                .card-btn{
+                    transform: translate(-50%, 50%);
+                    opacity: 1;
+                }
+                &hover{
+                    border-color: none;
+                    box-shadow:none;
+                }
+            }
+        }
     }
 }
 

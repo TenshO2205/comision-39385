@@ -1,0 +1,122 @@
+main{
+    .tittle-cart{
+        margin-top: 150px;
+        display: flex;
+        justify-content: center;
+        h2{
+            i{
+                padding-right: 15px;
+            }
+        }
+    }
+    .shopping-container{
+        display: flex;
+        flex-direction: row;
+        .lado-izquierdo{
+            margin-top:30px;
+            margin-left: 50px;
+            border-top: 1px solid rgba($color: #000000, $alpha: .5);
+            border-bottom: 1px solid rgba($color: #000000, $alpha: .5);
+            height: 18.75rem;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            img{
+                margin-top: 10px;
+                margin-left: 20px;
+                width: 150px;
+                height: 150px;
+                display: flex;
+            }
+            .info-cart{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row;
+                gap: 100px;
+                .products-cart{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+                }
+                .price-cart{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+                }
+                .month-cart{
+                    h3{
+                        margin: 0 auto;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    input{
+                        border-radius: 3px;
+                        border: 1px solid $color-negro;
+                        height: 30px;
+                        width: 90px;
+                        color: $color-negro;
+                        text-align: center;
+                    }
+                }
+                .total-cart{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+                }
+            }
+        }
+        .lado-derecho{
+            margin-top: 90px;
+            margin-left: 10%;
+            .input-cart{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                input{
+                    position: relative;
+                    height: 50px;
+                    width: 79%;
+                    border-radius: 2px;
+                    border: 2px solid rgba($color: #000000, $alpha: .5);
+                }
+                button{
+                    position: relative;
+                    top: 37.2%;
+                    right: 3.5%;
+                    height: 50px;
+                    width: 150px;
+                    border: none;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    background-color: $color-lila;
+                    color: $color-blanco;
+                }
+            }
+            .total{
+                margin-top: 40px;
+                display: flex;
+                flex-direction: row;
+                gap: 190px;
+            }
+            .btn-compra{
+                margin-top: 50px;
+                display: flex;
+                justify-content: center;
+                button{
+                    padding: 10px 80px;
+                    background-color: $color-lila;
+                    color: $color-blanco;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

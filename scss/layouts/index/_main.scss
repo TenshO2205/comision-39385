@@ -86,59 +86,63 @@ main{
         .destacados-modify{
             margin-top: 100px
         }
-        .todos-productos{
-            @include d-flex(space-evenly, wrap, 30px, none);
-            align-items: center;
-            .producto{
-                overflow: hidden;
-                background-color: #fafafa;
-                color: $color-negro;
-                text-align: center;
-                width: 290px;
-                height: 450px;
-                padding: 2rem;
-                @include d-flex(center, none, none, column);
-                align-items: center;
-                border-radius: 1.2rem;
-                margin: 2rem;
-                font-size: 18px;
+        .box-cards{
+            @include d-flex (space-evenly, wrap, 9rem, row);
+            margin: 50px 0;
+            .card{
+                margin: 0 auto;
+                width: 18rem;
+                height: 470px;
+                border-radius: 20px;
+                background-color: $color-blanco;
+                position: relative;
+                padding: 1.8rem;
+                border: 2px solid $color-gris;
+                transition: .5s ease-out;
+                overflow: visible;
                 img{
-                    margin-bottom: 50px;
-                    height: 220px;
-                    &:hover{
-                        transform: scale(1.05);
+                    margin: -30px -30px;
+                    width: 18rem;
+                    height: 300px;
+                    border-radius: 20px;
+                }
+                .card-details{
+                    color: $color-negro;
+                    height: 50%;
+                    @include d-flex(center, none, 1rem, column);
+                    align-items: center;
+                    .text-tittle{
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                    }
+                    .text-body{
+                        font-size: 1.3rem;
                     }
                 }
-                .info{
-                    .titulo-producto{
-                        font-size: 18px;
-                    }
-                    .precio-producto{
-                        margin-top: 10px;
-                        font-size: 18px;
-                    }
-                }
-                a{
-                    margin-top:10px ;
-                    &:link, &:visited{
-                        color: $color-blanco;
-                        display: inline-block;
-                        text-decoration: none;
-                        background-color: $color-lila;
-                        padding: 10px 10px;
-                        border-radius: 1rem;
-                        font-size: 14px;
-                        transition: all .2s;
-                    }
-                    &:hover{
-                        background-color: $color-gris;
-                        color: $color-negro;
-                        transform: scale(1.05);
-                        transition: all .5s;
-                    }
+                .card-btn{
+                    transform: translate(-50%, 125%);
+                    width: 60%;
+                    height: 3rem;
+                    border-radius: 1rem;
+                    border: none;
+                    background-color: $color-lila;
+                    color: $color-blanco;
+                    font-size: 1rem;
+                    padding: .5rem 1rem;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    opacity: 0;
+                    transition: .3s ease-out;
+                    cursor: pointer;
                 }
                 &:hover{
+                    border-color: $color-lila;
                     box-shadow: 5px 15px 25px $color-lila;
+                }
+                &:hover .card-btn{
+                    transform: translate(-50%, 50%);
+                    opacity: 1;
                 }
             }
         }

@@ -73,7 +73,7 @@
                 height: 50px;
                 width: 100%;
                 margin: 12px 0;
-                input, textarea{
+                input{
                     height: 100%;
                     width: 100%;
                     border: none;
@@ -85,6 +85,7 @@
                     resize: none;
                 }
                 textarea{
+                    @extend input;
                     padding-top: 6px;
                 }
             }
